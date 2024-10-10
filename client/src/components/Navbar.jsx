@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBookOpen } from "react-icons/fa";
 import LoginModel from "./LoginModel";
+import ConfirmLogout from "./ConfirmLogout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -92,7 +93,7 @@ const Navbar = () => {
           className="flex title-font font-medium items-center  ml-5 mb-4 md:mb-0"
         >
           <FaBookOpen className="text-2xl text-primary-red" />
-          <span className="ml-3 text-primary-red text-2xl">Bookies</span>
+          <span className="ml-3 text-primary-red text-2xl">OLX</span>
         </NavLink>
         <div className="flex flex-col items-center md:flex-row md:gap-72">
           <nav className="md:ml-auto mr-8 flex gap-10 flex-wrap items-center text-base justify-center">
@@ -105,16 +106,6 @@ const Navbar = () => {
               }
             >
               Home
-            </NavLink>
-            <NavLink
-              to="/books"
-              className={({ isActive }) =>
-                isActive
-                  ? "relative  after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-primary-red"
-                  : "hover:border-b-2 hover:border-primary-red transition-all duration-300"
-              }
-            >
-              Books
             </NavLink>
             <NavLink
               to="/contact"
@@ -174,6 +165,11 @@ const Navbar = () => {
           </div>
         </div>
         <LoginModel show={showLoginModel} onCancel={onCancel} />
+        <ConfirmLogout
+          show={showLogout}
+          onClose={onCancelLogout}
+          onConfirm={handleLogout}
+        />
       </div>
     </header>
   );

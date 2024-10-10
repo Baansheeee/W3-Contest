@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
         <Link className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
           <FaBookOpen className="text-2xl text-primary-red" />
-          <span className="ml-3 text-primary-red text-2xl">Bookies</span>
+          <span className="ml-3 text-primary-red text-2xl">OLX</span>
         </Link>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-          © 2020 Bookies
+          © 2020 OLX
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <Link className="text-gray-500">
